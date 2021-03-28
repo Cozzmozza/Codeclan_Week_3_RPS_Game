@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h3>Welcome to the relatively interactive URL based take, on Rock, Paper, Scissors</h3>
+
+<h4>So just how do we play this game?</h4>
+<p>
+    In normal Rock, Paper, Scissors, there are two players who use hand actions to choose to play either a Rock, Paper, or Scissors. 
+    They draw at the same time as one another, and the following rules apply:
+    <ul>
+        <li>Rock beats Scissors</li>
+        <li>Paper beats Rock</li>
+        <li>Scissors beats paper</li>
+    </ul>
+</p>
+<p>
+    The fun twist for this game however, is that not only is it played in your browser, it's played via the URL.
+</p>
+<p>
+    The current URL you are on is http://localhost:5000/rps/
+</p>
+<p>
+    In order for Player 1 to choose their Rock, Paper, or Scissors, they must enter it into the url after 'rps/', for example:
+    http://localhost:5000/rps/scissors/
+<p>
+    And for Player 2, they must enter their choice after Player 1.
+    http://localhost:5000/rps/scissors/rock
+
+</p>
+
+<p>
+    The result of this game, is Rock beats Scissors, meaning Player 2 wins the game! And so on.
+</p>
+{% endblock %}

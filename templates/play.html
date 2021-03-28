@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h3>Here, you can play against the computer</h3>
+
+<form action="/rps/play" method='POST'>
+    <label for="name">Your Name:</label>
+        <input type="text" name='name', id='name'>
+    <label for="choice">Rock, Paper, or Scissors?</label>
+        <input type="text" name='choice', id='choice'>
+        <!-- This later needs changed to a dropdown menu -->
+    <input type="submit" value="Submit Choice">
+</form>
+
+{% endblock %}
+
