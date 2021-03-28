@@ -17,7 +17,7 @@ class Game():
         elif self.p1.choice == rk and self.p2.choice == sc:
             return self.p1
         elif self.p1.choice == pa and self.p2.choice == rk:
-            return self.p2
+            return self.p1
         elif self.p1.choice == pa and self.p2.choice == sc:
             return self.p2
         elif self.p1.choice == sc and self.p2.choice == pa:

@@ -2,9 +2,13 @@
 
 {% block content %}
 
-<h2>This is a game of Rocks, Paper, Scissors</h2>
+<h3>This is a game of Rocks, Paper, Scissors</h3>
 
 {% for player in players %}
+<h4>{{player.name}} chose {{ player.choice }} </h4>
+{% endfor %}
+
+{% for player in players2 %}
 <h4>{{player.name}} chose {{ player.choice }} </h4>
 {% endfor %}
 

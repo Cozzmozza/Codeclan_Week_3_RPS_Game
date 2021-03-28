@@ -22,18 +22,22 @@ def choices(p1_choice, p2_choice):
 
 @app.route('/rps/play', methods=['post'])
 def play_cpu():
-    human_choice = request.form['choice'] #Works
-    human = Player(request.form['name'], human_choice) #Works
+    human_choice = request.form['choice']
+    human = Player(request.form['name'], human_choice) 
 
-    computer_choice = Game().play_computer() #Works
-    computer = Player('Computer', computer_choice) #Works
+    computer_choice = Game().play_computer()
+    computer = Player('Computer', computer_choice) 
 
-    outcome = Game().game_logic(human, computer) #This doesn't work
+    outcome = Game().game_logic(human, computer)
 
-    players = [human, computer] #Works
+    players2 = [human, computer]
 
-    return render_template('index.html', title='Result', players=players, outcome=outcome) #Works
+    return render_template('index.html', title='Result', players2=players2, outcome=outcome)
     # This seems a bit of a repetition from the decoration/choices function above
     # Can the play_cpu function utilize choices function?
-    # It's also saying every game is a draw
 
+    # And It's also not always working. Occasionally gives a wrong result. Why?
+        # Computer choice is fine. But the outcome code is reading it wrong, or logic is wrong
+        # The original possibilites all work fine entering into the URL, so that function does work..
+        # Is it because I have two players lists?
+        # *** THIS HAS FIXED IT, BUT IT SEEMS LAZY ***
